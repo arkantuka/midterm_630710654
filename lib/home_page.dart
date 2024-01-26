@@ -11,7 +11,7 @@ class _page extends State<home_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: 'Test',
+      appBar: AppBar(title: Text('midterm test')),
     );
   }
 }
