@@ -155,8 +155,8 @@ class _page extends State<calculator_page> {
     return InkWell(
       onTap: () => add_number(number),
       child: Container(
-        width: 80.0,
-        height: 65.0,
+        // width: 80.0,
+        // height: 65.0,
         decoration: BoxDecoration(
           color: Colors.red[100],
         ),
@@ -177,6 +177,7 @@ class _page extends State<calculator_page> {
   }
 
   Widget numpad() {
+    var space_size = 10.0;
     return Column(
       children: [
         Row(
@@ -189,10 +190,21 @@ class _page extends State<calculator_page> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            build_numpad_button(num_numpad[7]),
-            build_numpad_button(num_numpad[8]),
-            build_numpad_button(num_numpad[9]),
+            SizedBox(width: space_size),
+            Expanded(
+              child: build_numpad_button(num_numpad[7]),
+            ),
+            SizedBox(width: space_size),
+            Expanded(
+              child: build_numpad_button(num_numpad[8]),
+            ),
+            SizedBox(width: space_size),
+            Expanded(
+              child: build_numpad_button(num_numpad[9]),
+            ),
+            SizedBox(width: space_size),
             build_sign_button(divideSign),
+            SizedBox(width: space_size),
           ],
         ),
         Row(
