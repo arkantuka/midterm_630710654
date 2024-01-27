@@ -58,7 +58,7 @@ class _page extends State<calculator_page> {
     return InkWell(
       onTap: () => add_sign(sign_str),
       child: Container(
-        width: 70.0,
+        width: 80.0,
         height: 65.0,
         decoration: BoxDecoration(
           color: Colors.black26,
@@ -83,7 +83,7 @@ class _page extends State<calculator_page> {
     return InkWell(
       onTap: () => clear_number(),
       child: Container(
-        width: 500.0,
+        width: 400.0,
         height: 65.0,
         decoration: BoxDecoration(
           color: Colors.pink[600],
@@ -143,7 +143,7 @@ class _page extends State<calculator_page> {
           children: [
             Icon(
               Icons.backspace_outlined,
-              size: 40,
+              size: 30.0,
             ),
           ],
         ),
@@ -155,7 +155,7 @@ class _page extends State<calculator_page> {
     return InkWell(
       onTap: () => add_number(number),
       child: Container(
-        width: 70.0,
+        width: 80.0,
         height: 65.0,
         decoration: BoxDecoration(
           color: Colors.red[100],
@@ -182,10 +182,7 @@ class _page extends State<calculator_page> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: build_clear_button(),
-            ),
+            build_clear_button(),
             build_delete_button(),
           ],
         ),
@@ -251,7 +248,7 @@ class _page extends State<calculator_page> {
           child: Text("My Calculator"),
         ),
       ),
-      body: Container(
+      body: Expanded(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
